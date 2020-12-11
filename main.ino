@@ -13,3 +13,18 @@ void setup() {
   pinMode(LM2,OUTPUT);
   pinMode(RM1,OUTPUT);
   pinMode(RM2,OUTPUT);
+void loop() {
+  if(digitalRead(LS)&& digitalRead(RS))    //move forward
+  {
+    digitalWrite(LM1,HIGH);
+    digitalWrite(LM2,LOW);
+    digitalWrite(RM1,HIGH);
+    digitalWrite(RM2,LOW);
+  }
+  if(!(digitalRead(LS))&&digitalRead(RS))  //turn right
+  {
+    digitalWrite(LM1,LOW);
+    digitalWrite(LM2,LOW);
+    digitalWrite(RM1,HIGH);
+    digitalWrite(RM2,LOW);
+  }
