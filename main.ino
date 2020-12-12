@@ -28,3 +28,20 @@ void loop() {
     digitalWrite(RM1,HIGH);
     digitalWrite(RM2,LOW);
   }
+  if(digitalRead(LS)&&!(digitalRead(RS))) //turn left
+  {
+    digitalWrite(LM1,HIGH);
+    digitalWrite(LM2,LOW);
+    digitalWrite(RM1,LOW);
+    digitalWrite(RM2,LOW);
+  }
+  if(!(digitalRead(LS)&&!(digitalRead(RS)))) //stop
+  {
+    digitalWrite(LM1,LOW);
+    digitalWrite(LM2,LOW);
+    digitalWrite(RM1,LOW);
+    digitalWrite(RM2,LOW);
+    
+  }
+
+}
